@@ -1,37 +1,63 @@
-## Welcome to GitHub Pages
+## Role Assign
 
-You can use the [editor on GitHub](https://github.com/TheTimebike/OmniJeff-Help/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+!rstart *message ID*
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This starts a role assign creation session and allows you to configurate a message to become a role assign. Allows the usage of other commands.
 
-### Markdown
+!rrole add *Emote*-*Role Name*
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+This adds a reaction to the selected message with the emote that, when reacted with, assigns the given role.
 
-```markdown
-Syntax highlighted code block
+!rnick add *Emote*-*Role Name*
 
-# Header 1
-## Header 2
-### Header 3
+This adds a reaction to the selected message with the emote that, when reacted with, assigns the given name tags.
 
-- Bulleted
-- List
+!rrole remove *Emote*-*Role Name*
 
-1. Numbered
-2. List
+Removes the reaction on the selected message and disables the role assign for that reaction. Only works in an !redit session.
 
-**Bold** and _Italic_ and `Code` text
+!rnick remove *Emote*-*Role Name*
 
-[Link](url) and ![Image](src)
-```
+Removes the reaction on the selected message and disables the role assign for that reaction. Only works in an !redit session.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+!redit *message ID*
 
-### Jekyll Themes
+This starts a role assign edit session and allows you to change the configuration for a message. Allows the usage of other commands.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/TheTimebike/OmniJeff-Help/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+!rfinish
 
-### Support or Contact
+This ends and saves the role assign session. Role assigns will not work till they are saved
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Embed Creation
+
+!ecreate *Channel mention*
+
+Starts an embed creation session and allows the usage of other commands
+
+!etitle *Title*
+
+Adds the title to the embed, only avalible during an embed creation session.
+
+!etext *Text*
+
+Adds the text to the embed, only avalible during an embed creation session.
+
+!efinish
+
+Ends the embed creation session and sends the embed to the desired channel.
+
+## Streamer Module
+
+!streamermodule enable/disable
+
+Enables or disables the streamermodule. Is disabled by default.
+
+!streamermodule role *Role Name*
+
+Specifies the role that should be assigned when someone is streaming. Is "Streaming" by default.
+
+!streamermodule restrict *Role Name*
+
+Specifes the role that members must have when getting the streamer role. Put "@everyone" to not have a required role, is "@everyone" by default.
+
+## Invite Buster
